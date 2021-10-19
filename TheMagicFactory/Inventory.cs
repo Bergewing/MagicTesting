@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TheMagicFactory
 {
-    class Inventory
+    public class Inventory
     {
         //Material
         public int Metal { get; set; }
-        public int Wood { get; set; } = 10;
+        public int Wood { get; set; }
         public int Glass { get; set; }
 
         //Products
@@ -18,9 +18,21 @@ namespace TheMagicFactory
         public int WoodTable { get; set; }
         public int GlassTable { get; set; }
 
-        //public List<IGetTable> inventory = new List<IGetTable>();
+        public int Plånbok { get; set; }
 
-      
+        //public int PurchaseMetal()
+        //{
+        //    Console.Write("How much metal do you want to add? ");
+        //    int input = Convert.ToInt32(Console.ReadLine());
+        //    return Metal += input;
+        //}
+
+        //public int PurchaseWood()
+        //{
+        //    Console.Write("How much wood do you want to add? ");
+        //    int input = Convert.ToInt32(Console.ReadLine());
+        //    return Wood += input;
+        //}
 
         public void MetalCount()
         {
@@ -31,17 +43,17 @@ namespace TheMagicFactory
             Console.WriteLine($"Regular table: {RegularTable}" + "\n" + $"Wood table: {WoodTable}" + "\n" + $"Glass table: {GlassTable}");
         }
 
-        public void AddTreeTable()
-        {
-            if (Wood >= 2)
-            {
-                Wood -= 2;
+        //public void AddTreeTable()
+        //{
+        //    if (Wood >= 2)
+        //    {
+        //        Wood -= 2;
 
-                WoodTable++;
+        //        WoodTable++;
 
-            }
-            else Console.WriteLine("Not enough wood material to build a table.");
-        }
+        //    }
+        //    else Console.WriteLine("Not enough wood material to build a table.");
+        //}
 
     }
 }

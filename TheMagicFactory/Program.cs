@@ -1,23 +1,25 @@
 ﻿using System;
 using TheMagicFactory;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
-Purchase purchase = new Purchase();
-Inventory inventory = new Inventory();
+
+Factory factory = new Factory();
+
 
 while (true)
 {
-    //inventory.MetalCount();
-    inventory.ProductCount();
-    inventory.MetalCount();
-    inventory.AddTreeTable();
+    factory.GränsSnitt();
+    Console.WriteLine();
+    factory.AddWood();
+    Console.WriteLine();
+    factory.DoATable();
+    Console.WriteLine();
+    factory.GränsSnitt();
+    Console.ReadLine();
 
-    purchase.PurchaseMetal();
-    purchase.PurchaseWood();
 
-    inventory.AddTreeTable();
-    inventory.MetalCount();
-    inventory.ProductCount();
+
 }
 
 
