@@ -2,23 +2,22 @@
 using TheMagicFactory;
 using System.Collections.Generic;
 
-TreeTable treeTable = new TreeTable();
-GlassTable glassTable = new GlassTable();
-Material material = new Material();
+Purchase purchase = new Purchase();
+Inventory inventory = new Inventory();
 
-List<IGetTable> getTables = new List<IGetTable>();    
+while (true)
+{
+    //inventory.MetalCount();
+    inventory.ProductCount();
+    inventory.MetalCount();
+    inventory.AddTreeTable();
 
-treeTable.GetTable();
-treeTable.GetTable();
+    purchase.PurchaseMetal();
+    purchase.PurchaseWood();
 
-glassTable.GetTable();
-glassTable.GetTable();
-glassTable.GetTable();
-
-
-Console.WriteLine(getTables);
-
-
-Console.WriteLine(material.GlassMaterial);
+    inventory.AddTreeTable();
+    inventory.MetalCount();
+    inventory.ProductCount();
+}
 
 

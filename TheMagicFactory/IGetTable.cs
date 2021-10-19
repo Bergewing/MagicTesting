@@ -8,6 +8,6 @@ namespace TheMagicFactory
 {
     interface IGetTable
     {
-        public int GetTable();
+        public int AddTable();
     }
 }
