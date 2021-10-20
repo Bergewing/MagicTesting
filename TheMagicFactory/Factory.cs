@@ -26,6 +26,25 @@ namespace TheMagicFactory
             else Console.WriteLine("Not enough material.");
         }
 
+        public void ProduceAGlassTable()
+        {
+            if(inventory.Glass >= 1 && inventory.Metal >= 1)
+            {
+                inventory.Glass--;
+                inventory.Metal--;
+                inventory.GlassTable++;
+            }
+            else Console.WriteLine("Not enough material.");
+        }
+
+        public void ProduceARegularTable()
+        {
+            if(inventory.Metal >=1 && inventory.Wood >= 1)
+            {
+
+            }
+        }
+
         public void GränsSnitt()
         {
             inventory.MetalCount();
